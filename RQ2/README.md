@@ -21,14 +21,14 @@ To run the Jupyter Notebooks, ensure your environment is set up with the followi
 The evaluation pipeline is designed to be run in two distinct stages using the provided Jupyter Notebooks:
 
 ### Stage 1: Train the Learning-to-Rank (LTR) Model
-Use `LTR (1).ipynb` to build and train your ranking models.
+Use `LTR.ipynb` to build and train your ranking models.
 1. **Load Data:** The script loads the ground-truth `processed_700_sample.csv`.
 2. **Feature Engineering:** It extracts contextual features (e.g., cosine similarity, n-gram overlaps, repository metadata).
 3. **Training & Cross-Validation:** The notebook executes a 10-fold cross-validation process to train the LTR models (LightGBM/XGBoost).
 4. **Output:** The script saves the best-performing model's predictions to a CSV file (e.g., `10foldx.csv`), which is required for final metric comparison.
 
 ### Stage 2: Comparative Evaluation
-Use `evalMonnetalv2.ipynb` to compare your LTR model against other baselines.
+Use `evalMonnetal.ipynb` to compare your LTR model against other baselines.
 1. **Load Models:** The script imports the ranking results from various techniques, including TF-IDF, Sentence Transformers, Cross-Encoders, and LLMs (e.g., Mistral-7B).
 2. **Calculate Metrics:** It processes these rankings against the ground truth to calculate standardized metrics:
    * **NDCG@10** (Normalized Discounted Cumulative Gain)
@@ -42,8 +42,8 @@ Use `evalMonnetalv2.ipynb` to compare your LTR model against other baselines.
 ## 📂 Folder Contents
 
 ### 📓 Notebooks
-* **`LTR (1).ipynb`** Handles feature engineering, training, and cross-validation of LTR models.
-* **`evalMonnetalv2.ipynb`** Evaluates and compares baseline and SOTA ranking techniques.
+* **`LTR.ipynb`** Handles feature engineering, training, and cross-validation of LTR models.
+* **`evalMonnetal.ipynb`** Evaluates and compares baseline and SOTA ranking techniques.
 
 ### 📊 Datasets & Ground Truth
 * **`processed_700_sample.csv`** The manually annotated ground-truth dataset (700 stratified samples).
