@@ -9,7 +9,57 @@ The complete dataset generated from this study is hosted on Zenodo and can be ac
 📊 **[Dataset: Hyperlinks in PR Descriptions](https://zenodo.org/records/21343748)**
 
 ---
+## ⚙️ Prerequisites
+Before running the scripts in this folder, please ensure your environment is set up with the following:
+* **Python 3.x**
+* Standard data science libraries (e.g., `pandas`, `requests`). You can install dependencies via your terminal:
+  ```bash
+  pip install pandas requests
 
+* A GitHub Personal Access Token, which is required to fetch PR data from the GitHub API without hitting rate limits.
+
+## 🚀 How to Run the Code
+
+Most scripts in this repository can be executed directly from your command line using Python. Please follow the workflow below.
+
+**Step 1: Extract PR Links**
+
+Start by extracting pull request links from specific repositories using check_link.py:  
+
+  ```bash
+  python .\check_link.py
+```
+
+When executed, the script will prompt you for two inputs:
+
+* Repository Name: The target repo formatted as owner/repo (e.g., rust-lang/rust).
+
+* GitHub Token: Your personal GitHub access token.
+
+Note: This will generate a CSV file containing the extracted links for that specific repository. You can repeat this step for as many repositories as you wish to analyze.
+
+**Step 2: Combine the Data**
+
+Once you have generated the individual CSV files for your target repositories, you need to merge them into a single master dataset.
+
+  ```bash
+  python .\combine_all_repo.py
+```
+
+This script will merge all individual repository CSV files in the folder into a single file named combined.csv.
+
+**Step 3: Run Analysis and Sampling**
+
+Important: All subsequent scripts in this folder require combined.csv to be present in the directory.
+
+Once combined.csv is generated, you can run any of the analysis or preparation scripts by calling them from the command line:
+
+  ```bash
+  python .\Min_max.py
+  python .\domain_analysis.py
+```
+
+---
 ## Repository Contents
 
 ### Data Extraction & Processing
