@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite it as below."
+title: "Replication Package for \"Which Link Should I Look At First?: Automated Link Ranking in Code Reviews\""
+type: dataset
+version: 1.0.0
+date-released: 2026-10-15
+license:
+  - MIT
+  - CC-BY-4.0
+repository-code: "https://github.com/cragkhit/monnetalx-replication-package"
+authors:
+  - given-names: Panya
+    family-names: Trakoolgerntong
+    affiliation: "Faculty of Information and Communication Technology, Mahidol University"
+  - given-names: Arus
+    family-names: Thienmee
+    affiliation: "Faculty of Information and Communication Technology, Mahidol University"
+  - given-names: Patsathorn
+    family-names: Chadbantern
+    affiliation: "Faculty of Information and Communication Technology, Mahidol University"
+  - given-names: Chaiyong
+    family-names: Ragkhitwetsagul
+    affiliation: "Department of Computer Engineering, Faculty of Engineering, Chulalongkorn University"
+  - given-names: Morakot
+    family-names: Choetkiertikul
+    affiliation: "Faculty of Information and Communication Technology, Mahidol University"
+  - given-names: Tao
+    family-names: Xiao
+    affiliation: "Graduate School and Faculty of Information Science and Electrical Engineering, Kyushu University"
+  - given-names: Patanamon
+    family-names: Thongtanunam
+    affiliation: "School of Computing and Information Systems, The University of Melbourne"
+  - given-names: Yasutaka
+    family-names: Kamei
+    affiliation: "Graduate School and Faculty of Information Science and Electrical Engineering, Kyushu University"
+preferred-citation:
+  type: conference-paper
+  title: "Which Link Should I Look At First?: Automated Link Ranking in Code Reviews"
+  collection-title: "Proceedings of the 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)"
+  conference:
+    name: "33rd Asia-Pacific Software Engineering Conference (APSEC 2026)"
+    city: Bali
+    country: ID
+    date-start: 2026-12-07
+    date-end: 2026-12-10
+  publisher:
+    name: IEEE
+  year: 2026
+  authors:
+    - given-names: Panya
+      family-names: Trakoolgerntong
+    - given-names: Arus
+      family-names: Thienmee
+    - given-names: Patsathorn
+      family-names: Chadbantern
+    - given-names: Chaiyong
+      family-names: Ragkhitwetsagul
+    - given-names: Morakot
+      family-names: Choetkiertikul
+    - given-names: Tao
+      family-names: Xiao
+    - given-names: Patanamon
+      family-names: Thongtanunam
+    - given-names: Yasutaka
+      family-names: Kamei
+keywords:
+  - code review
+  - pull requests
+  - hyperlinks
+  - link ranking
+  - learning to rank
+  - mining software repositories

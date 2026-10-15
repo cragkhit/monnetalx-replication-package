@@ -25,5 +25,13 @@ The post-evaluation survey was distributed via Google Forms and made available i
 ---
 
 ## 📊 Results Data
-### `MonnetalX result (Responses) - Form Responses 1.csv`
-This file contains the raw dataset of the survey responses collected from our participants after they completed the tool showcase and evaluation.
+### `survey_responses_deidentified.csv`
+The survey responses of the 14 participants, one row per participant, collected after they completed the tool showcase and evaluation. The responses were de-identified for this release:
+* Submission timestamps were removed.
+* The consent statement was removed (all participants gave consent).
+* Participants are identified only by an ID assigned in this release (`P01`–`P14`).
+
+Likert answers keep the original labels (e.g., `4 - Good`). Some free-text comments are in Thai, as participants could answer in either language.
+
+### `survey_codebook.csv`
+Maps each column of the responses file to its survey section and the full question text. The SUS columns `sus_q1`–`sus_q10` follow the standard System Usability Scale order: odd items are positively worded, even items negatively worded.
