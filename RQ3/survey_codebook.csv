@@ -1,0 +1,20 @@
+column,section,question
+summary_adequacy,Evaluation of link summarization,Please indicate your level of satisfaction with the summarization output. [Adequacy]
+summary_conciseness,Evaluation of link summarization,Please indicate your level of satisfaction with the summarization output. [Conciseness]
+summary_fluency,Evaluation of link summarization,Please indicate your level of satisfaction with the summarization output. [Fluency]
+ranking_time_saving,Evaluation of link ranking,Please indicate your level of satisfaction with the ranking output. [Time saving]
+ranking_more_focused,Evaluation of link ranking,Please indicate your level of satisfaction with the ranking output. [More focused]
+ranking_reduced_cognitive_load,Evaluation of link ranking,Please indicate your level of satisfaction with the ranking output. [Reduced cognitive load]
+comment_ranking_and_summary,Ranking and Summary Feedback,Provide your additional comment to improve the ranking and summarization technique
+sus_q1,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I think that I would like to use this system frequently.]
+sus_q2,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I found the system unnecessarily complex.]
+sus_q3,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I thought the system was easy to use.]
+sus_q4,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I think that I would need the support of a technical person to be able to use this system.]
+sus_q5,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I found the various functions in this system were well-integrated.]
+sus_q6,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I thought there was too much inconsistency in this system.]
+sus_q7,System Usability Scale (SUS) Evaluate,"Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I would imagine that most people would learn to use this system very quickly,]"
+sus_q8,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I found the system very cumbersome to use.]
+sus_q9,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I felt very confident using the system.]
+sus_q10,System Usability Scale (SUS) Evaluate,Please indicate how much you agree or disagree with the following statements about the MonnetalX tool [I needed to learn a lot of things before I could get going with system.]
+comment_usability,Usability Feedback,Provide your additional comment to improve the usability of the tool.
+participant,,Participant identifier assigned for this release (P01-P14); not linked to any identity
