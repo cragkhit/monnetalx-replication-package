@@ -1,0 +1,29 @@
+\begin{table}[tb]
+\centering
+\caption{Comparison of Link Ranking Models on the 68 Test PRs: Mean [95\% Bootstrap CI] (P@1=Precision@1 and KT=Kendall's Tau). $^\dagger$: significantly lower than LightGBM-8-features (paired test, Holm-corrected $p<0.05$)}
+\label{tab:autoeval}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{NDCG@10} & \textbf{P@1} & \textbf{MRR} & \textbf{KT} \\
+\midrule
+\textbf{Original} & 0.915$^\dagger$ {\scriptsize[0.89, 0.93]} & 0.426$^\dagger$ {\scriptsize[0.31, 0.54]} & 0.656$^\dagger$ {\scriptsize[0.58, 0.73]} & 0.464$^\dagger$ {\scriptsize[0.33, 0.59]} \\
+\midrule
+\textbf{TF-IDF} & 0.917$^\dagger$ {\scriptsize[0.90, 0.94]} & 0.529 {\scriptsize[0.41, 0.65]} & 0.701 {\scriptsize[0.62, 0.78]} & 0.354$^\dagger$ {\scriptsize[0.23, 0.48]} \\
+\midrule
+\multicolumn{5}{l}{\textbf{SBERT Encoder}} \\
+all\_minilm\_l6\_v2 & 0.938 {\scriptsize[0.92, 0.95]} & 0.588 {\scriptsize[0.47, 0.71]} & \textbf{0.756} {\scriptsize[0.68, 0.83]} & 0.429$^\dagger$ {\scriptsize[0.32, 0.53]} \\
+\midrule
+\multicolumn{5}{l}{\textbf{Reranker (Cross-Encoder)}} \\
+jina\_reranker & 0.924 {\scriptsize[0.91, 0.94]} & 0.485 {\scriptsize[0.37, 0.60]} & 0.704 {\scriptsize[0.63, 0.78]} & 0.400$^\dagger$ {\scriptsize[0.28, 0.51]} \\
+\midrule
+\multicolumn{5}{l}{\textbf{LLM as Encoders}} \\
+deepseek\_coder & 0.924 {\scriptsize[0.90, 0.94]} & 0.529 {\scriptsize[0.41, 0.65]} & 0.693 {\scriptsize[0.61, 0.77]} & 0.361$^\dagger$ {\scriptsize[0.24, 0.48]} \\
+mistral7B & 0.932 {\scriptsize[0.92, 0.95]} & 0.544 {\scriptsize[0.43, 0.66]} & 0.720 {\scriptsize[0.65, 0.79]} & 0.429$^\dagger$ {\scriptsize[0.32, 0.53]} \\
+\midrule
+\multicolumn{5}{l}{\textbf{Learning-to-rank (LTR)}} \\
+LightGBM-4-features & 0.901$^\dagger$ {\scriptsize[0.88, 0.92]} & 0.353$^\dagger$ {\scriptsize[0.24, 0.47]} & 0.606$^\dagger$ {\scriptsize[0.53, 0.68]} & 0.331$^\dagger$ {\scriptsize[0.18, 0.48]} \\
+LightGBM-8-features & \textbf{0.952} {\scriptsize[0.94, 0.97]} & \textbf{0.618} {\scriptsize[0.50, 0.74]} & 0.752 {\scriptsize[0.67, 0.83]} & \textbf{0.627} {\scriptsize[0.53, 0.72]} \\
+\bottomrule
+\end{tabular}}
+\end{table}
