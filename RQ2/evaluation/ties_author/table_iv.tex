@@ -1,29 +1,38 @@
 \begin{table}[tb]
 \centering
-\caption{Comparison of Link Ranking Models on the 68 Test PRs: Mean [95\% Bootstrap CI] (P@1=Precision@1 and KT=Kendall's Tau). $^\dagger$: significantly lower than LightGBM-8-features (paired test, Holm-corrected $p<0.05$)}
+\caption{Comparison of Link Ranking Models on the 68 Test PRs: Mean [95\% Bootstrap CI] (P@1=Precision@1 and KT=Kendall's Tau). $^\dagger$: Significantly Lower than LightGBM-8-features (Paired Test, Holm-Corrected $p<0.05$)}
 \label{tab:autoeval}
-\resizebox{\columnwidth}{!}{%
+\footnotesize
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lcccc}
 \toprule
 \textbf{Model} & \textbf{NDCG@10} & \textbf{P@1} & \textbf{MRR} & \textbf{KT} \\
 \midrule
-\textbf{Original} & 0.915$^\dagger$ {\scriptsize[0.89, 0.93]} & 0.426$^\dagger$ {\scriptsize[0.31, 0.54]} & 0.656$^\dagger$ {\scriptsize[0.58, 0.73]} & 0.464$^\dagger$ {\scriptsize[0.33, 0.59]} \\
+\textbf{Original} & 0.915$^\dagger$ & 0.426$^\dagger$ & 0.656$^\dagger$ & 0.464$^\dagger$ \\
+ & {\scriptsize[0.89, 0.93]} & {\scriptsize[0.31, 0.54]} & {\scriptsize[0.58, 0.73]} & {\scriptsize[0.33, 0.59]} \\[1pt]
 \midrule
-\textbf{TF-IDF} & 0.917$^\dagger$ {\scriptsize[0.90, 0.94]} & 0.529 {\scriptsize[0.41, 0.65]} & 0.701 {\scriptsize[0.62, 0.78]} & 0.354$^\dagger$ {\scriptsize[0.23, 0.48]} \\
+\textbf{TF-IDF} & 0.917$^\dagger$ & 0.529 & 0.701 & 0.354$^\dagger$ \\
+ & {\scriptsize[0.90, 0.94]} & {\scriptsize[0.41, 0.65]} & {\scriptsize[0.62, 0.78]} & {\scriptsize[0.23, 0.48]} \\[1pt]
 \midrule
 \multicolumn{5}{l}{\textbf{SBERT Encoder}} \\
-all\_minilm\_l6\_v2 & 0.938 {\scriptsize[0.92, 0.95]} & 0.588 {\scriptsize[0.47, 0.71]} & \textbf{0.756} {\scriptsize[0.68, 0.83]} & 0.429$^\dagger$ {\scriptsize[0.32, 0.53]} \\
+all\_minilm\_l6\_v2 & 0.938 & 0.588 & \textbf{0.756} & 0.429$^\dagger$ \\
+ & {\scriptsize[0.92, 0.95]} & {\scriptsize[0.47, 0.71]} & {\scriptsize[0.68, 0.83]} & {\scriptsize[0.32, 0.53]} \\[1pt]
 \midrule
 \multicolumn{5}{l}{\textbf{Reranker (Cross-Encoder)}} \\
-jina\_reranker & 0.924 {\scriptsize[0.91, 0.94]} & 0.485 {\scriptsize[0.37, 0.60]} & 0.704 {\scriptsize[0.63, 0.78]} & 0.400$^\dagger$ {\scriptsize[0.28, 0.51]} \\
+jina\_reranker & 0.924 & 0.485 & 0.704 & 0.400$^\dagger$ \\
+ & {\scriptsize[0.91, 0.94]} & {\scriptsize[0.37, 0.60]} & {\scriptsize[0.63, 0.78]} & {\scriptsize[0.28, 0.51]} \\[1pt]
 \midrule
 \multicolumn{5}{l}{\textbf{LLM as Encoders}} \\
-deepseek\_coder & 0.924 {\scriptsize[0.90, 0.94]} & 0.529 {\scriptsize[0.41, 0.65]} & 0.693 {\scriptsize[0.61, 0.77]} & 0.361$^\dagger$ {\scriptsize[0.24, 0.48]} \\
-mistral7B & 0.932 {\scriptsize[0.92, 0.95]} & 0.544 {\scriptsize[0.43, 0.66]} & 0.720 {\scriptsize[0.65, 0.79]} & 0.429$^\dagger$ {\scriptsize[0.32, 0.53]} \\
+deepseek\_coder & 0.924 & 0.529 & 0.693 & 0.361$^\dagger$ \\
+ & {\scriptsize[0.90, 0.94]} & {\scriptsize[0.41, 0.65]} & {\scriptsize[0.61, 0.77]} & {\scriptsize[0.24, 0.48]} \\[1pt]
+mistral7B & 0.932 & 0.544 & 0.720 & 0.429$^\dagger$ \\
+ & {\scriptsize[0.92, 0.95]} & {\scriptsize[0.43, 0.66]} & {\scriptsize[0.65, 0.79]} & {\scriptsize[0.32, 0.53]} \\[1pt]
 \midrule
 \multicolumn{5}{l}{\textbf{Learning-to-rank (LTR)}} \\
-LightGBM-4-features & 0.901$^\dagger$ {\scriptsize[0.88, 0.92]} & 0.353$^\dagger$ {\scriptsize[0.24, 0.47]} & 0.606$^\dagger$ {\scriptsize[0.53, 0.68]} & 0.331$^\dagger$ {\scriptsize[0.18, 0.48]} \\
-LightGBM-8-features & \textbf{0.952} {\scriptsize[0.94, 0.97]} & \textbf{0.618} {\scriptsize[0.50, 0.74]} & 0.752 {\scriptsize[0.67, 0.83]} & \textbf{0.627} {\scriptsize[0.53, 0.72]} \\
+LightGBM-4-features & 0.901$^\dagger$ & 0.353$^\dagger$ & 0.606$^\dagger$ & 0.331$^\dagger$ \\
+ & {\scriptsize[0.88, 0.92]} & {\scriptsize[0.24, 0.47]} & {\scriptsize[0.53, 0.68]} & {\scriptsize[0.18, 0.48]} \\[1pt]
+LightGBM-8-features & \textbf{0.952} & \textbf{0.618} & 0.752 & \textbf{0.627} \\
+ & {\scriptsize[0.94, 0.97]} & {\scriptsize[0.50, 0.74]} & {\scriptsize[0.67, 0.83]} & {\scriptsize[0.53, 0.72]} \\[1pt]
 \bottomrule
-\end{tabular}}
+\end{tabular}
 \end{table}

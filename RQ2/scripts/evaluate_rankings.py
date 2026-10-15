@@ -246,10 +246,11 @@ def latex_table(summary, tests, n):
         r"\begin{table}[tb]",
         r"\centering",
         r"\caption{Comparison of Link Ranking Models on the " + str(n) + r" Test PRs: Mean [95\% Bootstrap CI] "
-        r"(P@1=Precision@1 and KT=Kendall's Tau). $^\dagger$: significantly lower than LightGBM-8-features "
-        r"(paired test, Holm-corrected $p<0.05$)}",
+        r"(P@1=Precision@1 and KT=Kendall's Tau). $^\dagger$: Significantly Lower than LightGBM-8-features "
+        r"(Paired Test, Holm-Corrected $p<0.05$)}",
         r"\label{tab:autoeval}",
-        r"\resizebox{\columnwidth}{!}{%",
+        r"\footnotesize",
+        r"\setlength{\tabcolsep}{4pt}",
         r"\begin{tabular}{lcccc}",
         r"\toprule",
         r"\textbf{Model} & \textbf{NDCG@10} & \textbf{P@1} & \textbf{MRR} & \textbf{KT} \\",
@@ -265,7 +266,7 @@ def latex_table(summary, tests, n):
         label = LABEL.get(r.model, r.model).replace("_", r"\_")
         if g is None:
             label = r"\textbf{" + label + "}"
-        cells = []
+        cells, cis = [], []  # CIs go on a second row so the table fits one column
         for m in METRICS:
             v = getattr(r, m)
             s = f"{v:.3f}"
@@ -274,9 +275,11 @@ def latex_table(summary, tests, n):
             if (r.model, METRIC_NAMES[m]) in sig:
                 s += r"$^\dagger$"
             lo, hi = getattr(r, f"{m}_lo"), getattr(r, f"{m}_hi")
-            cells.append(s + r" {\scriptsize[" + f"{lo:.2f}, {hi:.2f}" + "]}")
+            cells.append(s)
+            cis.append(r"{\scriptsize[" + f"{lo:.2f}, {hi:.2f}" + "]}")
         lines.append(f"{label} & " + " & ".join(cells) + r" \\")
-    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table}", ""]
+        lines.append(" & " + " & ".join(cis) + r" \\[1pt]")
+    lines += [r"\bottomrule", r"\end{tabular}", r"\end{table}", ""]
     return "\n".join(lines)
 
 
