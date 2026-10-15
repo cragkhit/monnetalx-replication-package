@@ -1,5 +1,7 @@
 # Replication Package: Which Link Should I Look At First? Automated Link Ranking in Code Reviews
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23383155.svg)](https://doi.org/10.5281/zenodo.23383155)
+
 This is the replication package for our paper, accepted at the **33rd Asia-Pacific Software Engineering Conference ([APSEC 2026](https://conf.researchr.org/home/apsec-2026))**, Bali, Indonesia, December 7–10, 2026:
 
 > Panya Trakoolgerntong, Arus Thienmee, Patsathorn Chadbantern, Chaiyong Ragkhitwetsagul, Morakot Choetkiertikul, Tao Xiao, Patanamon Thongtanunam, and Yasutaka Kamei. **Which Link Should I Look At First?: Automated Link Ranking in Code Reviews.** In *Proceedings of the 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)*, 2026.
@@ -53,4 +55,8 @@ Each folder has its own README with step-by-step instructions.
 The datasets include PR descriptions and text fetched from linked resources. That content remains subject to its original authors' licenses and terms. See [`LICENSE`](LICENSE) for details.
 
 ## 📝 How to Cite
-If you use this package, please cite the paper above and this replication package (see [`CITATION.cff`](CITATION.cff), or use the citation shown on the package's Zenodo page).
+If you use this package, please cite the paper above and this replication package:
+
+> Panya Trakoolgerntong, Arus Thienmee, Patsathorn Chadbantern, Chaiyong Ragkhitwetsagul, Morakot Choetkiertikul, Tao Xiao, Patanamon Thongtanunam, and Yasutaka Kamei. *Replication Package for "Which Link Should I Look At First?: Automated Link Ranking in Code Reviews".* Zenodo, 2026. [https://doi.org/10.5281/zenodo.23383155](https://doi.org/10.5281/zenodo.23383155)
+
+Citation metadata is also in [`CITATION.cff`](CITATION.cff).
