@@ -1,6 +1,8 @@
-# monnetalx-replication-package
+# Replication Package: Which Link Should I Look At First? Automated Link Ranking in Code Reviews
 
-Welcome to the replication package for our study on hyperlinks in Pull Request (PR) descriptions. 
+Welcome to the replication package for our paper, accepted at the **33rd Asia-Pacific Software Engineering Conference ([APSEC 2026](https://conf.researchr.org/home/apsec-2026))**, Bali, Indonesia, December 7–10, 2026:
+
+> Panya Trakoolgerntong, Arus Thienmee, Patsathorn Chadbantern, Chaiyong Ragkhitwetsagul, Morakot Choetkiertikul, Tao Xiao, Patanamon Thongtanunam, and Yasutaka Kamei. **Which Link Should I Look At First?: Automated Link Ranking in Code Reviews.** In *Proceedings of the 33rd Asia-Pacific Software Engineering Conference (APSEC 2026)*, 2026.
 
 This repository contains all the code, datasets, and analysis scripts necessary to replicate our methodology and answer our three primary Research Questions (RQs) regarding how developers use, rank, and perceive hyperlinks during the PR review process.
 
